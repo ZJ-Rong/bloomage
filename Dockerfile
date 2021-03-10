@@ -12,8 +12,8 @@ COPY ./composer.lock /app/
 RUN composer install --prefer-dist  --no-autoloader --no-scripts
 COPY . /app
 RUN composer install --prefer-dist
-RUN chown -R www-data:www-data /app \
-    && chmod 777 -R /app/public/images/merge-images
+##RUN chown -R www-data:www-data /app \
+##    && chmod 777 -R /app/public/images/merge-images
 
 #配置虚拟主机
 RUN rm -rf /var/www/html && ln -s /app/public /var/www/html
