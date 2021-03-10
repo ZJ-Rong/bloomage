@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM chicked/php74-apache-with-code
 MAINTAINER chicked <qq307365873@gmail.com>
 
 RUN docker-php-ext-install pcntl
